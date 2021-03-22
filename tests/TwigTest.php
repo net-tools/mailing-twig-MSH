@@ -31,7 +31,7 @@ class TwigTest extends \PHPUnit\Framework\TestCase
 		$msh = new Twig($ml, 'msh content #{{ name }}#', 'text/plain', 'unit-test@php.com', 'test subject');
 
 		$mcontent = $msh->render(['name' => 'me !']);
-		$ml->send($mcontent, 'recipient@here.com');
+		$msh->send($mcontent, 'recipient@here.com');
 		
 		$this->assertEquals(1, count($ml->getSent()));
 		$this->assertEquals(true, is_int(strpos($ml->getSent()[0], 'msh content #me !#')));
