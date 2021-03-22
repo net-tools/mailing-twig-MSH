@@ -28,7 +28,7 @@ class TwigTest extends \PHPUnit\Framework\TestCase
 	public function testMSH()
 	{
 		$ml = new Mailer(new \Nettools\Mailing\MailSenders\Virtual());
-		$msh = new Twig($ml, 'msh content #{{ name }}#', 'text/plain', 'unit-test@php.com', 'test subject', ['cache' => $this->root]);
+		$msh = new Twig($ml, 'msh content #{{ name }}#', 'text/plain', 'unit-test@php.com', 'test subject');
 
 		$mcontent = $msh->render(['name' => 'me !']);
 		$ml->send($mcontent, 'recipient@here.com');
