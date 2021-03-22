@@ -1,5 +1,5 @@
 {
-    "name" : "net-tools/mailing-twig-MSH",
+    "name" : "net-tools/mailing-twig-msh",
 	
     "description" : "Composer library to render emails with Twig MailSenderHelper",
 	
