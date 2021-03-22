@@ -18,7 +18,7 @@
 	
 	"autoload": {
 		"psr-4": {
-			"Nettools\\Mailing\\MailSenderHelpers": "src/"
+			"Nettools\\Mailing\\MailSenderHelpers\\": "src/"
 		}
     },
 	 
